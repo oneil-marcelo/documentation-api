@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DocumentationApi</name>
+    </assembly>
+    <members>
+        <member name="M:ClientApi.Controllers.ClientController.Get">
+             <summary>
+             Retorna todos os clientes.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    
+                    "name": "Item1"
+                 }
+            
+             </remarks>
+             <returns>A newly created TodoItem</returns>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null</response> 
+        </member>
+        <member name="M:ClientApi.Controllers.ClientController.Get(System.String)">
+            <param name="name"></param>
+        </member>
+        <member name="P:DocumentationApi.Models.Client.Name">
+            <Sumary>
+            Obtém ou define o nome
+            </Sumary>
+            <Value> O Nome</Value>
+        </member>
+    </members>
+</doc>
