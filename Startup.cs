@@ -24,6 +24,8 @@ namespace DocumentationApi
             services.AddMvc();
 
             services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<ICompanyRepository, CompanyRepository>();
+            services.AddScoped<IGameRepository, GameRepository>();
 
             services.AddSwaggerGen(c =>
             {

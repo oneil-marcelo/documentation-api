@@ -11620,11 +11620,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ChlebaAdmin/Developer/Treinamento/DocumentationApi/DocumentationApi.csproj",
+      "projectUniqueName": "/Users/ChlebaAdmin/Developer/Treinamento/documentation-api/DocumentationApi.csproj",
       "projectName": "DocumentationApi",
-      "projectPath": "/Users/ChlebaAdmin/Developer/Treinamento/DocumentationApi/DocumentationApi.csproj",
+      "projectPath": "/Users/ChlebaAdmin/Developer/Treinamento/documentation-api/DocumentationApi.csproj",
       "packagesPath": "/Users/ChlebaAdmin/.nuget/packages/",
-      "outputPath": "/Users/ChlebaAdmin/Developer/Treinamento/DocumentationApi/obj/",
+      "outputPath": "/Users/ChlebaAdmin/Developer/Treinamento/documentation-api/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

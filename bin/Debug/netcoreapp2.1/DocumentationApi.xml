@@ -13,13 +13,12 @@
             
                  POST /Todo
                  {
-                    
-                    "name": "Item1"
+                    "name": "Nome do cliente"
                  }
             
              </remarks>
              <returns>A newly created TodoItem</returns>
-             <response code="201">Returns the newly created item</response>
+             <response code="200">Returns the newly created item</response>
              <response code="400">If the item is null</response> 
         </member>
         <member name="M:ClientApi.Controllers.ClientController.Get(System.String)">

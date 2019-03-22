@@ -25,17 +25,16 @@ namespace ClientApi.Controllers
         ///
         ///     POST /Todo
         ///     {
-        ///        
         ///        "name": "Nome do cliente"
         ///     }
         ///
         /// </remarks>
         /// <returns>A newly created TodoItem</returns>
-        /// <response code="201">Returns the newly created item</response>
+        /// <response code="200">Returns the newly created item</response>
         /// <response code="400">If the item is null</response> 
         [HttpGet]
         [Produces("application/json")]
-        [ProducesResponseType(201)]
+        [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [Route("v1/clients")]
         public async Task<IEnumerable<Client>> Get()
