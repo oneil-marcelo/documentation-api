@@ -10,7 +10,6 @@ namespace DocumentationApi.Models
         /// Obtém ou define o nome
         /// </Sumary>
         /// <Value> O Nome</Value>
-        [Required]
         public string Name { get; set; }
 
     }

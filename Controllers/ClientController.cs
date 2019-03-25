@@ -42,7 +42,7 @@ namespace ClientApi.Controllers
             return await _clientRepository.GetClientAsync();
         }
 
-        /// <param name="name"></param>
+        /// <param name="name">teste</param>
         [HttpGet]
         [Route("v1/clients/{name}")]
         public async Task<Client> Get(string name)

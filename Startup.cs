@@ -21,6 +21,7 @@ namespace DocumentationApi
         
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddMvc();
 
             services.AddScoped<IClientRepository, ClientRepository>();
@@ -60,6 +61,8 @@ namespace DocumentationApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+            
             app.UseMvc();
 
             app.UseSwagger();
