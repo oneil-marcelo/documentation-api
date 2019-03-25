@@ -32,18 +32,12 @@ namespace DocumentationApi
             {
                 c.SwaggerDoc("v1", new Info
                 {
-                    Title = "My API",
+                    Title = "Game API",
                     Version = "v1",
-                    Description = "Documentando API com o Swagger.",
-                    TermsOfService = "None",
+                    Description = "Game API, projeto cujo o objetivo é documentar API usando o framework Swagger. \n Também foi abordado a customização visual do framework.",
                     Contact = new Contact {
                         Name = "Marcelo O'neil",
-                        Email = "email@email.com.br",
-                        Url = "https://www.github.com/oneilmarcelo"
-                    },
-                    License = new License { 
-                        Name = "User Under XPTO",
-                        Url = "https://www.github.com/oneilmarcelo"
+                        Url = "https://www.github.com/oneil-marcelo"
                     }
                 });
 
@@ -76,7 +70,7 @@ namespace DocumentationApi
                 c.InjectStylesheet("/swagger-ui/custom.css");
                 c.InjectJavascript("/swagger-ui/custom.js");
                 c.RoutePrefix = "docs";
-                c.SwaggerEndpoint("/docs/v1/docs.json", "My API V1");
+                c.SwaggerEndpoint("/docs/v1/docs.json", "Game API");
             });
         }
     }

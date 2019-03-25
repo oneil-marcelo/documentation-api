@@ -27,7 +27,7 @@ namespace DocumentationApi.Controllers
         public async Task<IActionResult> GetCompaniesAsync()
         {
             var companies = await _repository.getCompaniesAsync(); 
-            companies = null;
+            
             if(companies != null)
                 return Ok(companies);
             else
