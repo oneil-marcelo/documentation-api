@@ -65,11 +65,18 @@ namespace DocumentationApi
             
             app.UseMvc();
 
-            app.UseSwagger();
+            app.UseSwagger(o => 
+            {
+                o.RouteTemplate = "docs/{documentName}/docs.json";
+            });
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                
+                c.InjectStylesheet("/swagger-ui/custom.css");
+                c.InjectJavascript("/swagger-ui/custom.js");
+                c.RoutePrefix = "docs";
+                c.SwaggerEndpoint("/docs/v1/docs.json", "My API V1");
             });
         }
     }
