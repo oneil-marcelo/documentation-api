@@ -7,12 +7,11 @@ Olá, esse é o repositório da Game API, aqui você vai encontrar um exemplo de
 * Swashbuckle.AspNetCore.Swagger
 
 ## Sobre a API
-O principal objetivo é o estudo de como documentar uma API no ASP.NET Core com Swagger, por isso o escopo limita as rotas de leitura de dados.
+O objetivo desse estudo é entender como documentar uma API no ASP.NET Core com Swagger, por isso, o escopo abrange os métodos de leitura de dados.
 
-Os dados por sua vez são um mock, ou seja, o serviço não acessa banco de dados. Se você tiver esse interesse, pode acessar o [repositório contact-api](../../../contact-api). Nesse estudo abordo acesso a dados com Entity Framework.
+Os dados são um mock, ou seja, o serviço não acessa banco de dados. Se você tiver esse interesse, pode acessar o [repositório contact-api](../../../contact-api). Nesse estudo abordo acesso a dados com Entity Framework Core.
 
 ## Sobre Resultado
-Abaixo um print com resultado esperado.
 
 #### *Layout Customizado* ####
 ![](wwwroot/images/game-api-screenshot-1.png)
