@@ -11,7 +11,11 @@ O objetivo desse estudo é entender como documentar uma API no ASP.NET Core com 
 
 Os dados são um mock, ou seja, o serviço não acessa banco de dados. Se você tiver esse interesse, pode acessar o [repositório contact-api](../../../contact-api). Nesse estudo abordo acesso a dados com Entity Framework Core.
 
+<<<<<<< HEAD
 ## Sobre Resultado
+=======
+## Resultado Esperado
+>>>>>>> e0da43446c158d232738e71c217fa50c4a14341f
 
 #### *Layout Customizado* ####
 ![](wwwroot/images/game-api-screenshot-1.png)
