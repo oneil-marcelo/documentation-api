@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DocumentationApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v1/[controller]")]
     public class GameController : Controller
     {
         private readonly IGameRepository _repository;
@@ -18,10 +18,10 @@ namespace DocumentationApi.Controllers
         }
 
         /// <summary>
-        /// Retorna lista com todos os jogos.
+        /// Obtém e retorna uma lista com todos os jogos.
         /// </summary>
-        /// <response code="200">Retorna lista com todos os jogos.</response>
-        /// <response code="404">Retorna mensagem de jogos inexistentes.</response>
+        /// <response code="200">Obtém e retorna uma lista com todos os jogos.</response>
+        /// <response code="404">Se a lista for nula, retorna mensagem de jogos inexistentes.</response>
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<Game>))]
         [ProducesResponseType(404)]
@@ -36,11 +36,11 @@ namespace DocumentationApi.Controllers
         }
 
         /// <summary>
-        /// Retorna um jogo.
+        /// Obtém e retorna um jogo filtrado pelo Id.
         /// </summary>
-        /// <param name="id">Guid no formato de string.</param>
-        /// <response code="200">Retorna um jogo.</response>
-        /// <response code="404">Retorna mensagem jogo inexistente.</response>
+        /// <param name="id">O parametro "id" é um GUID convertido em string e utilizado para filtrar um jogo pelo Id.</param>
+        /// <response code="200">Obtém e retorna um jogo filtrado pelo Id.</response>
+        /// <response code="404">Se item for nulo, retorna mensagem de jogo inexistente.</response>
         [HttpGet]
         [Route("{id}")]
         [ProducesResponseType(200, Type = typeof(Game))]
@@ -56,11 +56,11 @@ namespace DocumentationApi.Controllers
         }
 
         /// <summary>
-        ///  Retorna todos os jogos da companhia especificada no parametro.
+        ///  Obtém e retorna uma lista de jogos filtrados pelo nome da companhia.
         /// </summary>
-        /// <response code ="200">Retorna lista de jogos da companhia especificada.</response>
-        /// <response code="404">Retorna mensagem companhia não possui jogos cadastrados.</response>
-        /// <param name="company">String nome da companhia.</param>
+        /// <param name="company">O parametro "company" é utilizado para filtrar uma lista de jogos pelo nome da companhia.</param>
+        /// <response code="200">Obtém e retorna uma lista de jogos filtrados pelo nome da companhia.</response>
+        /// <response code="404">Se a lista for nula, retorna mensagem que a companhia não possui jogos cadastrados.</response>
         [HttpGet]
         [Route("{company}")]
         [ProducesResponseType(200, Type=typeof(List<Game>))]

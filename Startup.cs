@@ -24,7 +24,6 @@ namespace DocumentationApi
             
             services.AddMvc();
 
-            services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<ICompanyRepository, CompanyRepository>();
             services.AddScoped<IGameRepository, GameRepository>();
 
@@ -34,11 +33,16 @@ namespace DocumentationApi
                 {
                     Title = "Game API",
                     Version = "v1",
-                    Description = "Game API, projeto cujo o objetivo é documentar API usando o framework Swagger. \n Também foi abordado a customização visual do framework.",
+                    Description = "O projeto Game API tem o objetivo de estudar e a demostrar de maneira clara e objetiva, \ncomo documentar API usando o framework Swagger.",
                     Contact = new Contact {
-                        Name = "Marcelo O'neil",
-                        Url = "https://www.github.com/oneil-marcelo"
+                        Name = "Sobre o Autor",
+                        Url = "https://www.linkedin.com/in/oneil-marcelo/",
+                    },
+                    License = new License {
+                        Name = "Código Fonte GitHub",
+                        Url = "https://www.github.com/oneil-marcelo/documentation-api"
                     }
+
                 });
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -53,6 +57,20 @@ namespace DocumentationApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                app.UseSwagger(o => 
+                {
+                    o.RouteTemplate = "docs/{documentName}/docs.json";
+                });
+
+                app.UseSwaggerUI(c =>
+                {
+                    
+                    c.InjectStylesheet("/swagger-ui/custom.css");
+                    c.InjectJavascript("/swagger-ui/custom.js");
+                    c.RoutePrefix = "docs";
+                    c.SwaggerEndpoint("/docs/v1/docs.json", "Game API");
+                });
             }
 
             app.UseStaticFiles();
@@ -67,10 +85,10 @@ namespace DocumentationApi
             app.UseSwaggerUI(c =>
             {
                 
-                c.InjectStylesheet("/swagger-ui/custom.css");
-                c.InjectJavascript("/swagger-ui/custom.js");
+                c.InjectStylesheet("/api/swagger-ui/custom.css");
+                c.InjectJavascript("/api/swagger-ui/custom.js");
                 c.RoutePrefix = "docs";
-                c.SwaggerEndpoint("/docs/v1/docs.json", "Game API");
+                c.SwaggerEndpoint("/api/docs/v1/docs.json", "Game API");
             });
         }
     }

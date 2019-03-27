@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DocumentationApi.Controllers
 {
    
-    [Route("api/[controller]")]
+    [Route("v1/[controller]")]
     public class CompanyController : Controller
     {
         private readonly ICompanyRepository _repository;
@@ -18,10 +18,10 @@ namespace DocumentationApi.Controllers
         }
 
         /// <summary>
-        /// Retorna lista com todas as Companhias.
+        /// Obtém e retorna uma lista com todas as companhias.
         /// </summary>
-        /// <response code="200">Retorna lista com todas as Companhias.</response>
-        /// <response code="404">Retorna mensagem de companhias inexistentes.</response> 
+        /// <response code="200">Obtém e retorna uma lista com todas as companhias.</response>
+        /// <response code="404">Se lista for nula, retorna mensagem de companhias inexistentes.</response> 
         [HttpGet]
         [Produces("application/json", Type = typeof(List<Company>))]
         public async Task<IActionResult> GetCompaniesAsync()
@@ -35,10 +35,11 @@ namespace DocumentationApi.Controllers
         }
 
         /// <summary>
-        /// Retorna uma companhia filtra pelo nome.
+        /// Obtém e retorna uma companhia filtrada pelo nome.
         /// </summary>
-        /// <response code="200">Retorna uma companhia.</response>
-        /// <response code="404">Retorna mensagem se a companhia é inexistente.</response> 
+        /// <param name="name">O parametro "name" é uma string utilizada para filtrar uma campanhia pelo nome.</param> 
+        /// <response code="200">Obtém e retorna uma companhia filtrada pelo nome.</response>
+        /// <response code="404">Se item for nulo, retorna mensagem de companhia inexistente.</response> 
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(Company))]
         [ProducesResponseType(404)]

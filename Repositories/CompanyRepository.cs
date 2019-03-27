@@ -20,15 +20,15 @@ namespace DocumentationApi.Repositories
                
                new Company {
                    Name = "Capcom",
-                   Image = $"{_configuration["baseUrl"]}images/capcom.png"
+                   Image = $"{_configuration["baseUrlActive"]}images/capcom.png"
                },
                new Company {
                    Name = "EA-Sports",
-                   Image = $"{_configuration["baseUrl"]}images/ea-sports.png"
+                   Image = $"{_configuration["baseUrlActive"]}images/ea-sports.png"
                },
                new Company {
                    Name = "Konami",
-                   Image = $"{_configuration["baseUrl"]}images/konami.png"
+                   Image = $"{_configuration["baseUrlActive"]}images/konami.png"
                }
            }; 
         }

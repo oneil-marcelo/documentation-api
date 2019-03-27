@@ -6,46 +6,41 @@
     <members>
         <member name="M:DocumentationApi.Controllers.CompanyController.GetCompaniesAsync">
             <summary>
-            Retorna lista com todas as Companhias.
+            Obtém e retorna uma lista com todas as companhias.
             </summary>
-            <response code="200">Retorna lista com todas as Companhias.</response>
-            <response code="404">Retorna mensagem de companhias inexistentes.</response> 
+            <response code="200">Obtém e retorna uma lista com todas as companhias.</response>
+            <response code="404">Se lista for nula, retorna mensagem de companhias inexistentes.</response> 
         </member>
         <member name="M:DocumentationApi.Controllers.CompanyController.GetCompanyByNameAsync(System.String)">
             <summary>
-            Retorna uma companhia filtra pelo nome.
+            Obtém e retorna uma companhia filtrada pelo nome.
             </summary>
-            <response code="200">Retorna uma companhia.</response>
-            <response code="404">Retorna mensagem se a companhia é inexistente.</response> 
+            <param name="name">O parametro "name" é uma string utilizada para filtrar uma campanhia pelo nome.</param> 
+            <response code="200">Obtém e retorna uma companhia filtrada pelo nome.</response>
+            <response code="404">Se item for nulo, retorna mensagem de companhia inexistente.</response> 
         </member>
         <member name="M:DocumentationApi.Controllers.GameController.GetGamesAsync">
             <summary>
-            Retorna lista com todos os jogos.
+            Obtém e retorna uma lista com todos os jogos.
             </summary>
-            <response code="200">Retorna lista com todos os jogos.</response>
-            <response code="404">Retorna mensagem de jogos inexistentes.</response>
+            <response code="200">Obtém e retorna uma lista com todos os jogos.</response>
+            <response code="404">Se a lista for nula, retorna mensagem de jogos inexistentes.</response>
         </member>
         <member name="M:DocumentationApi.Controllers.GameController.GetGameByIdAsync(System.String)">
             <summary>
-            Retorna um jogo.
+            Obtém e retorna um jogo filtrado pelo Id.
             </summary>
-            <param name="id">Guid no formato de string.</param>
-            <response code="200">Retorna um jogo.</response>
-            <response code="404">Retorna mensagem jogo inexistente.</response>
+            <param name="id">O parametro "id" é um GUID convertido em string utilizado para filtrar um jogo pelo Id.</param>
+            <response code="200">Obtém e retorna um jogo filtrado pelo Id.</response>
+            <response code="404">Se item for nulo, retorna mensagem de jogo inexistente.</response>
         </member>
         <member name="M:DocumentationApi.Controllers.GameController.GetGameByCompanyAsync(System.String)">
             <summary>
-             Retorna todos os jogos da companhia especificada no parametro.
+             Obtém e retorna uma lista de jogos filtrados pelo nome da companhia.
             </summary>
-            <response code ="200">Retorna lista de jogos da companhia especificada.</response>
-            <response code="404">Retorna mensagem companhia não possui jogos cadastrados.</response>
-            <param name="company">String nome da companhia.</param>
-        </member>
-        <member name="P:DocumentationApi.Models.Client.Name">
-            <Sumary>
-            Obtém ou define o nome
-            </Sumary>
-            <Value> O Nome</Value>
+            <response code="200">Obtém e retorna uma lista de jogos filtrados pelo nome da companhia.</response>
+            <response code="404">Se a lista for nula, retorna mensagem que a companhia não possui jogos cadastrados.</response>
+            <param name="company">O parametro "company" é utilizado para filtrar um lista de jogos pelo nome da companhia.</param>
         </member>
         <member name="T:DocumentationApi.Models.Company">
             <summary>
