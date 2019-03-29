@@ -1,5 +1,5 @@
-# Game API
-O repositório da Game API é um projeto de estudo de como documentar um serviço web utilizando o framework Swagger.
+# Documentation-API (Game API)
+O repositório é um estudo de como documentar um serviço rest utilizando o Swagger.
 
 ## Tecnologias Implementadas
 * ASP.NET Core 2.1.4
@@ -7,9 +7,9 @@ O repositório da Game API é um projeto de estudo de como documentar um serviç
 * Swashbuckle.AspNetCore.Swagger
 
 ## Sobre a API
-O foco foi documentar uma API no ASP.NET Core usando o Swagger, por isso, o escopo abrange somente os métodos de leitura.
+O foco foi documentar uma API no ASP.NET Core, por isso, o escopo abrange somente os métodos de leitura.
 
-O serviço trabalha em cima de um mock, assim, não há a necessidade de integração com banco de dados. Se essa for a sua busca, acesse o [repositório contact-api](../../../contact-api). Nesse estudo abordo acesso a dados com Entity Framework Core.
+Os dados são um mock dentro do diretório repositories, assim, não houve a necessidade de integração com banco de dados.
 
 ## Sobre Resultado
 
