@@ -33,7 +33,7 @@ namespace DocumentationApi
                 {
                     Title = "Game API",
                     Version = "v1",
-                    Description = "O projeto Game API tem o objetivo de estudar e a demostrar de maneira clara e objetiva, \ncomo documentar API usando o framework Swagger.",
+                    Description = "O projeto Game API tem o objetivo de estudar e a demonstrar de maneira objetiva, \ncomo documentar API usando o framework Swagger.",
                     Contact = new Contact {
                         Name = "Sobre o Autor",
                         Url = "https://www.linkedin.com/in/oneil-marcelo/",
